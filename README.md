@@ -16,4 +16,4 @@ git push heroku
 
 ### Configure WhoIsCalling on iphone
 
-Source Url: http://your-app-name.herokuapp.com/search?u=YourFonectaUsername&YourFonectaPassword&[WHO]
+Source Url: http://your-app-name.herokuapp.com/search?u=YourFonectaUsername&p=YourFonectaPassword&n=[WHO]
