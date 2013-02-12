@@ -2,13 +2,13 @@ require 'rubygems'
 require 'sinatra'
 require 'mechanize'
 
-get '/search/:u/:p' do
+get '/:n' do
   fetch params[:u],params[:p],params[:n]
 end
 
 private
 
-def fetch(address,fname,lname)
+def fetch(address,lname,fname)
 #def fetch(username,password,number)
   #a = Mechanize.new
   #a.get('https://m.fonecta.fi/kirjaudu?from=%2Fhenkilot') do |login_page|
