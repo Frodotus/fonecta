@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'mechanize'
 
-get '/search/:u/:p/' do
+get '/search/:u/:p' do
   fetch params[:u],params[:p],params[:n]
 end
 
