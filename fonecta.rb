@@ -2,8 +2,8 @@ require 'rubygems'
 require 'sinatra'
 require 'mechanize'
 
-get '/search/:username/:password/:number' do
-  fetch params[:username],params[:password],params[:number]
+get '/search' do
+  fetch params[:u],params[:p],params[:n]
 end
 
 private
@@ -20,7 +20,10 @@ def fetch(username,password,number)
     end.click_button
     result = result_page.at '.search-results'
     name = result.at('.profile').text.strip
+    name = name.split(' ')
+    fname = name[0]
+    lname = name[1]
     address = result.at('.adr').text.strip
-    return "<Name>#{name}</Name>\n<LastName></LastName>\n<Address>#{address}</Address>\n<PostalCode></PostalCode>\n<City></City>\n"
+    return "<Name>#{fname}</Name>\n<LastName>#{lname}</LastName>\n<Address>#{address}</Address>\n<PostalCode></PostalCode>\n<City></City>\n"
   end
 end
