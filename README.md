@@ -1,4 +1,4 @@
-# fonecta
+# Fonecta proxy
 =======
 
 Fonecta finder proxy for IPhone WhoIsCalling
