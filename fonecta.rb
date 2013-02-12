@@ -2,6 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'mechanize'
 
+get '/' do
+  ""
+end
+
 get '/:u/:p/:n' do
   fetch params[:u],params[:p],params[:n]
 end
